@@ -1,4 +1,4 @@
-# E-Commerce Data Cleaning & Preprocessing
+<img width="704" height="393" alt="gross_sales_after png" src="https://github.com/user-attachments/assets/f7f68290-6ed6-496c-a334-18af7969d1ac" /># E-Commerce Data Cleaning & Preprocessing
 
 This project applies practical data cleaning and preprocessing techniques to an e-commerce dataset using Python and Pandas.
 
@@ -7,6 +7,7 @@ The goal was not only to remove missing values, but to understand **why the data
 ## Dataset
 
 The project uses the **E-Commerce Sales & Customer Analytics** dataset from Kaggle.
+**Dataset Source:** [E-Commerce Sales & Customer Analytics on Kaggle](https://www.kaggle.com/datasets/datascikhan/e-commerce-sales-and-customer-analytics)
 
 The original dataset contains:
 
@@ -40,6 +41,18 @@ The dataset contained:
 
 Missing values were analyzed based on the meaning of each feature rather than being removed automatically.
 
+| Column | Missing Values | Percentage |
+|---|---:|---:|
+| return_status | 128,654 | 93.15% |
+| return_reason | 128,654 | 93.15% |
+| coupon_code | 110,502 | 80.01% |
+| campaign_name | 83,233 | 60.26% |
+| delivery_days | 24,557 | 17.78% |
+| estimated_delivery_days | 24,557 | 17.78% |
+| customer_rating | 24,557 | 17.78% |
+| customer_review | 24,557 | 17.78% |
+| review_sentiment | 24,557 | 17.78% |
+
 The following changes were made:
 
 * Missing `return_status` values were replaced with **"Not Returned"**
@@ -59,18 +72,20 @@ This makes it easier to perform future analysis based on year, month, day, or ti
 
 ### 4. Text Consistency Checks
 
-Several categorical columns were checked for inconsistent formatting, capitalization, and extra spaces, including:
+Several categorical columns were inspected using `value_counts()`, `unique()`, and temporary lowercase and whitespace normalization with `.str.lower()` and `.str.strip()` to detect inconsistent entries.
 
-* `order_status`
-* `gender`
-* `payment_method`
-* `customer_country`
-* `customer_city`
-* `customer_state`
-* `sales_channel`
-* `customer_segment`
+Columns checked included:
 
-No major text inconsistencies were found.
+- `order_status`
+- `gender`
+- `payment_method`
+- `customer_country`
+- `customer_city`
+- `customer_state`
+- `sales_channel`
+- `customer_segment`
+
+No major inconsistencies in capitalization, spacing, or category naming were found.
 
 ### 5. Numerical Data Validation
 
@@ -82,13 +97,14 @@ The values were found to be within reasonable ranges.
 
 The original `gross_sales` distribution was positively skewed.
 
-**Original skewness:** `1.91`
-
 A **Box-Cox transformation** was applied to make the distribution more symmetric.
 
-**Normalized skewness:** `-0.03`
-
 The original `gross_sales` column was preserved, while the transformed values were stored in a new column called `gross_sales_normalized`.
+
+The original distribution was strongly right-skewed, while the Box-Cox transformed distribution became much more symmetric.
+
+**Skewness before transformation:** `1.91`  
+**Skewness after transformation:** `-0.03`
 
 ### 7. Feature Scaling
 
@@ -149,6 +165,21 @@ This project helped me practice and better understand:
 
 One of the main lessons from this project was that data cleaning is not simply about removing missing values. It is important to understand the meaning and context of the data before deciding how each issue should be handled.
 
+## How to Run
+
+1. Clone or download this repository.
+2. Download the original dataset from Kaggle using the dataset link above.
+3. Open `e-commerce-dataset-cleaning.ipynb`.
+4. Update the dataset path if needed.
+5. Run the notebook cells in order.
+
+## Possible Next Steps
+
+- Perform exploratory data analysis on the cleaned dataset
+- Analyze sales trends over time
+- Explore customer segmentation
+- Build machine learning models using the prepared features
+  
 ## Project Background
 
 This project was created as a practical follow-up to the **Kaggle Data Cleaning course**, with the goal of applying the concepts learned in the course to a larger e-commerce dataset.
