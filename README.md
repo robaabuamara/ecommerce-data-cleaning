@@ -101,11 +101,16 @@ A **Box-Cox transformation** was applied to make the distribution more symmetric
 
 The original `gross_sales` column was preserved, while the transformed values were stored in a new column called `gross_sales_normalized`.
 
-The original distribution was strongly right-skewed, while the Box-Cox transformed distribution became much more symmetric.
-
 **Skewness before transformation:** `1.91`  
 **Skewness after transformation:** `-0.03`
 
+#### Distribution Before Transformation
+
+![Gross Sales Before Box-Cox](gross_sales_before.png)
+
+#### Distribution After Box-Cox Transformation
+
+![Gross Sales After Box-Cox](gross_sales_after.png)
 ### 7. Feature Scaling
 
 Min-Max Scaling was applied to:
