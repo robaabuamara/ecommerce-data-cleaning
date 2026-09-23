@@ -1,4 +1,4 @@
-<img width="704" height="393" alt="gross_sales_after png" src="https://github.com/user-attachments/assets/f7f68290-6ed6-496c-a334-18af7969d1ac" /># E-Commerce Data Cleaning & Preprocessing
+# E-Commerce Data Cleaning & Preprocessing
 
 This project applies practical data cleaning and preprocessing techniques to an e-commerce dataset using Python and Pandas.
 
@@ -106,11 +106,10 @@ The original `gross_sales` column was preserved, while the transformed values we
 
 #### Distribution Before Transformation
 
-![Gross Sales Before Box-Cox](gross_sales_before.png)
+<img src="https://raw.githubusercontent.com/robaabuamara/ecommerce-data-cleaning/main/gross_sales_before.png.png" alt="gross sales before" />
 
 #### Distribution After Box-Cox Transformation
-
-![Gross Sales After Box-Cox](gross_sales_after.png)
+<img width="704" height="393" alt="gross_sales_after png" src="https://github.com/user-attachments/assets/f7f68290-6ed6-496c-a334-18af7969d1ac" />
 ### 7. Feature Scaling
 
 Min-Max Scaling was applied to:
