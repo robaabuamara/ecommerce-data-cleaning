@@ -164,3 +164,36 @@ ecommerce-data-cleaning/
 ├── README.md
 ├── e-commerce-dataset-cleaning.ipynb
 └── sample_ecommerce_data.csv
+
+
+
+
+
+
+Technologies Used
+Python
+Pandas
+NumPy
+SciPy
+Scikit-learn
+Matplotlib
+Kaggle Notebooks
+Key Learning Outcomes
+
+This project helped me practice and better understand:
+
+Missing value analysis
+Data type conversion
+Date parsing
+Text consistency checking
+Numerical data validation
+Distribution analysis
+Box-Cox normalization
+Min-Max scaling
+Final data quality validation
+
+One of the main lessons from this project was that data cleaning is not simply about removing missing values. It is important to understand the meaning and context of the data before deciding how each issue should be handled.
+
+Project Background
+
+This project was created as a practical follow-up to the Kaggle Data Cleaning course, with the goal of applying the concepts learned in the course to a larger e-commerce dataset.
