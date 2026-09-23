@@ -166,10 +166,6 @@ ecommerce-data-cleaning/
 └── sample_ecommerce_data.csv
 
 
-
-
-
-
 Technologies Used
 Python
 Pandas
@@ -197,3 +193,8 @@ One of the main lessons from this project was that data cleaning is not simply a
 Project Background
 
 This project was created as a practical follow-up to the Kaggle Data Cleaning course, with the goal of applying the concepts learned in the course to a larger e-commerce dataset.
+
+
+
+
+
